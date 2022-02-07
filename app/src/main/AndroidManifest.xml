@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DataBaseAngelBlanco">
         <activity
+            android:name=".AddUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,5 +1,6 @@
 package com.angelblanco.database_angelblanco
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -25,11 +26,17 @@ class UserAdapter(
         val user = getItem(position)
 
         holder.binding.tvName.text = user.name
+        holder.binding.tvBirthDay.text = user.birthday
         holder.binding.tvSubname.text = user.subname
         holder.binding.tvNumber.text = user.numberPhone
+        holder.binding.root.setOnClickListener{
+            onItemClick(user)
+        }
+
         holder.binding.btnDelete.setOnClickListener{
             deleteItemClick(user)
         }
+
     }
 
 
